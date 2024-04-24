@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{ba5b9b4e-9e2e-4a5e-8786-10da96c40268}</ProjectGuid>
+    <RootNamespace>DOOMSDL</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>S:\SDL2-2.28.3\include;S:\SDL2_image-2.6.3\include;S:\SDL2_mixer-2.8.0\include;$(IncludePath)</IncludePath>
+    <LibraryPath>S:\SDL2-2.28.3\lib\x64;S:\SDL2_image-2.6.3\lib\x64;S:\SDL2_mixer-2.8.0\lib\x64;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_mixer.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="SDL2.dll" />
+    <None Include="SDL2_image.dll" />
+    <None Include="SDL2_mixer.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Application.cpp" />
+    <ClCompile Include="src\Enemy.cpp" />
+    <ClCompile Include="src\InputManager.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\Map.cpp" />
+    <ClCompile Include="src\ObjectHandler.cpp" />
+    <ClCompile Include="src\ObjectRenderer.cpp" />
+    <ClCompile Include="src\Player.cpp" />
+    <ClCompile Include="src\PlayerWeapon.cpp" />
+    <ClCompile Include="src\RayCasting.cpp" />
+    <ClCompile Include="src\Sprite.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Application.h" />
+    <ClInclude Include="src\Enemy.h" />
+    <ClInclude Include="src\InputManager.h" />
+    <ClInclude Include="src\Map.h" />
+    <ClInclude Include="src\ObjectHandler.h" />
+    <ClInclude Include="src\ObjectRenderer.h" />
+    <ClInclude Include="src\Player.h" />
+    <ClInclude Include="src\PlayerWeapon.h" />
+    <ClInclude Include="src\RayCasting.h" />
+    <ClInclude Include="src\Settings.h" />
+    <ClInclude Include="src\Sprite.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="assets\digits\0.png" />
+    <Image Include="assets\digits\1.png" />
+    <Image Include="assets\digits\10.png" />
+    <Image Include="assets\digits\2.png" />
+    <Image Include="assets\digits\3.png" />
+    <Image Include="assets\digits\4.png" />
+    <Image Include="assets\digits\5.png" />
+    <Image Include="assets\digits\6.png" />
+    <Image Include="assets\digits\7.png" />
+    <Image Include="assets\digits\8.png" />
+    <Image Include="assets\digits\9.png" />
+    <Image Include="assets\sprites\animated\green\0.png" />
+    <Image Include="assets\sprites\animated\green\1.png" />
+    <Image Include="assets\sprites\animated\green\2.png" />
+    <Image Include="assets\sprites\animated\green\3.png" />
+    <Image Include="assets\sprites\animated\weapons\shotgun\0.png" />
+    <Image Include="assets\sprites\animated\weapons\shotgun\1.png" />
+    <Image Include="assets\sprites\animated\weapons\shotgun\2.png" />
+    <Image Include="assets\sprites\animated\weapons\shotgun\3.png" />
+    <Image Include="assets\sprites\animated\weapons\shotgun\4.png" />
+    <Image Include="assets\sprites\animated\weapons\shotgun\5.png" />
+    <Image Include="assets\sprites\enemies\caco_demon\0.png" />
+    <Image Include="assets\sprites\enemies\caco_demon\attack\0.png" />
+    <Image Include="assets\sprites\enemies\caco_demon\attack\1.png" />
+    <Image Include="assets\sprites\enemies\caco_demon\attack\2.png" />
+    <Image Include="assets\sprites\enemies\caco_demon\attack\3.png" />
+    <Image Include="assets\sprites\enemies\caco_demon\attack\4.png" />
+    <Image Include="assets\sprites\enemies\caco_demon\death\0.png" />
+    <Image Include="assets\sprites\enemies\caco_demon\death\1.png" />
+    <Image Include="assets\sprites\enemies\caco_demon\death\2.png" />
+    <Image Include="assets\sprites\enemies\caco_demon\death\3.png" />
+    <Image Include="assets\sprites\enemies\caco_demon\death\4.png" />
+    <Image Include="assets\sprites\enemies\caco_demon\death\5.png" />
+    <Image Include="assets\sprites\enemies\caco_demon\idle\0.png" />
+    <Image Include="assets\sprites\enemies\caco_demon\idle\1.png" />
+    <Image Include="assets\sprites\enemies\caco_demon\idle\2.png" />
+    <Image Include="assets\sprites\enemies\caco_demon\idle\3.png" />
+    <Image Include="assets\sprites\enemies\caco_demon\idle\4.png" />
+    <Image Include="assets\sprites\enemies\caco_demon\idle\5.png" />
+    <Image Include="assets\sprites\enemies\caco_demon\idle\6.png" />
+    <Image Include="assets\sprites\enemies\caco_demon\idle\7.png" />
+    <Image Include="assets\sprites\enemies\caco_demon\pain\0.png" />
+    <Image Include="assets\sprites\enemies\caco_demon\pain\1.png" />
+    <Image Include="assets\sprites\enemies\caco_demon\walk\0.png" />
+    <Image Include="assets\sprites\enemies\caco_demon\walk\1.png" />
+    <Image Include="assets\sprites\enemies\caco_demon\walk\2.png" />
+    <Image Include="assets\sprites\enemies\soldier\0.png" />
+    <Image Include="assets\sprites\enemies\soldier\attack\0.png" />
+    <Image Include="assets\sprites\enemies\soldier\attack\1.png" />
+    <Image Include="assets\sprites\enemies\soldier\death\POSSM0.png" />
+    <Image Include="assets\sprites\enemies\soldier\death\POSSN0.png" />
+    <Image Include="assets\sprites\enemies\soldier\death\POSSO0.png" />
+    <Image Include="assets\sprites\enemies\soldier\death\POSSP0.png" />
+    <Image Include="assets\sprites\enemies\soldier\death\POSSQ0.png" />
+    <Image Include="assets\sprites\enemies\soldier\death\POSSR0.png" />
+    <Image Include="assets\sprites\enemies\soldier\death\POSSS0.png" />
+    <Image Include="assets\sprites\enemies\soldier\death\POSST0.png" />
+    <Image Include="assets\sprites\enemies\soldier\death\POSSU0.png" />
+    <Image Include="assets\sprites\enemies\soldier\idle\0.png" />
+    <Image Include="assets\sprites\enemies\soldier\idle\1.png" />
+    <Image Include="assets\sprites\enemies\soldier\idle\2.png" />
+    <Image Include="assets\sprites\enemies\soldier\idle\3.png" />
+    <Image Include="assets\sprites\enemies\soldier\idle\4.png" />
+    <Image Include="assets\sprites\enemies\soldier\idle\5.png" />
+    <Image Include="assets\sprites\enemies\soldier\idle\6.png" />
+    <Image Include="assets\sprites\enemies\soldier\idle\7.png" />
+    <Image Include="assets\sprites\enemies\soldier\pain\0.png" />
+    <Image Include="assets\sprites\enemies\soldier\walk\0.png" />
+    <Image Include="assets\sprites\enemies\soldier\walk\1.png" />
+    <Image Include="assets\sprites\enemies\soldier\walk\2.png" />
+    <Image Include="assets\sprites\enemies\soldier\walk\3.png" />
+    <Image Include="assets\sprites\static\candlebra.png" />
+    <Image Include="assets\textures\1.png" />
+    <Image Include="assets\textures\2.png" />
+    <Image Include="assets\textures\3.png" />
+    <Image Include="assets\textures\4.png" />
+    <Image Include="assets\textures\5.png" />
+    <Image Include="assets\textures\blood_screen.png" />
+    <Image Include="assets\textures\game_over.png" />
+    <Image Include="assets\textures\sky.png" />
+    <Image Include="assets\textures\win.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="assets\sounds\npc_attack.wav" />
+    <Media Include="assets\sounds\npc_death.wav" />
+    <Media Include="assets\sounds\npc_pain.wav" />
+    <Media Include="assets\sounds\player_pain.wav" />
+    <Media Include="assets\sounds\shotgun.wav" />
+    <Media Include="assets\sounds\theme.mp3" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
